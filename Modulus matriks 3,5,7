@@ -1,0 +1,55 @@
+# Ujian Akhir Semester 
+<br>Mata Kuliah 	: Dasar Pemograman
+<br> Nama		: Muhammad Ahsani Taqwim  
+<br>NIM		:	1227050083
+<br>Jurusan		:[Teknik Informatika](http://if.uinsgd.ac.id/) [UIN Sunan Gunung Djati Bandung](https://uinsgd.ac.id/) 
+
+## Deskripsi Umum
+matriks adalah susunan bilangan, simbol, atau ekspresi yang disusun dalam baris dan kolom sehingga membentuk suatu bangun persegi. Program ini dibuat untuk mensortir bilangan yang ada pada matriks yang bisa habis dibagi dengan 3,5,7 atau bisa disebut dengan modulus 3,5,dan 7.
+## Source Code
+```
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main(){
+    
+	int arr[100][100], jumlahBaris, jumlahKolom, i, j, baris, kolom;
+
+    cout<<" Input jumlah baris: "; 
+	cin>>jumlahBaris;
+    cout<<" Input jumlah kolom: "; 
+	cin>>jumlahKolom;
+    cout << endl;
+
+    for(i = 0; i < jumlahBaris; i++){
+        for(j = 0; j < jumlahKolom; j++){
+            cout << " Baris " <<i+1<<", Kolom "<<j+1<< " = ";
+            cin >> arr[i][j];
+        }
+        cout << endl;
+    }
+
+    cout << " Hasil input nilai : " << endl;
+
+    for(i = 0; i < jumlahBaris ; i++){
+    for(j = 0; j < jumlahKolom; j++){
+        cout << setw(3) << arr[i][j] << " ";
+    }
+    cout << endl;
+    }
+
+    cout << " Hasil bilangan yang habis dibagi 3,5,7 : " << endl;
+
+    for(i = 0; i < jumlahBaris ; i++){
+    for(j = 0; j < jumlahKolom; j++){
+        if(arr[i][j] % 3 == 0 || arr[i][j] % 5 == 0 || arr[i][j] % 7 == 0){
+        cout << setw(3) << arr[i][j] << " ";
+        }
+    }
+    cout << endl;
+    }
+	cout<<endl;
+}
+```
+## Output
+![Screenshot_20221219_160916](https://user-images.githubusercontent.com/121000503/208392302-796a08cd-bdb0-4e88-b6d3-b0f4d50efe8f.png)
